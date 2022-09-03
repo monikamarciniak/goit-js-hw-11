@@ -108,3 +108,32 @@ form.addEventListener('submit', async event => {
   }
 });
 
+window.addEventListener(
+  'scroll',
+  debounce(async event => {
+    try {
+      if (window.innerHeight === document.documentElement.scrollHeight) {
+        return;
+      }
+      if (
+        window.scrollY + 0.5 + window.innerHeight >=
+        document.documentElement.scrollHeight
+      ) {
+        page += 1;
+        let trimInput = localStorage.getItem('inputValue');
+        const varPhotos = await fetchPhotos(trimInput, page);
+        const photosArr = varPhotos.hits;
+
+        renderNextPhotos(photosArr);
+        lightbox.refresh();
+        const { height: cardHeight } = document
+          .querySelector('.gallery')
+          .firstElementChild.getBoundingClientRect();
+        window.scrollBy({
+          top: cardHeight * 1.5,
+          behavior: 'smooth',
+        });
+      }
+    } catch (error) {}
+  }, 100)
+);
