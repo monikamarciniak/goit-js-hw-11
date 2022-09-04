@@ -5,8 +5,6 @@ import Notiflix from 'notiflix';
 import simpleLightbox from 'simplelightbox';
 
 const form = document.querySelector('.search-form');
-const input = document.querySelector('input');
-const searchBtn = document.querySelector(`button[type="submit"]`);
 const gallery = document.querySelector('.gallery');
 
 const API_KEY = '29711203-05eaaaab908cc3e1419fc45fb';
