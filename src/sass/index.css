@@ -10,12 +10,12 @@
 
 .example code {
   font-family: monospace;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   background-color: #ff6b0a;
   color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+  padding: 2px 3px;
+  border-radius: 3px;
 }
 
 .example .background {
@@ -30,13 +30,13 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: #085ecc;
+  background-color: #cc088e;
 }
 
 input {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 button {
-  font-size: 22px;
+  font-size: 25px;
 }/*# sourceMappingURL=index.css.map */
