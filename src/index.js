@@ -2,7 +2,7 @@ import './sass/index.scss';
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { getImages } from './getImages';
+import { getImages } from './GetImages';
 
 const searchForm = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
