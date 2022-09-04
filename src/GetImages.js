@@ -2,7 +2,7 @@ export {getImages};
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://pixabay.com/api/';
+axios.defaults.baseURL = 'https://pixabay.com/';
 
 async function getImages(query, page, perPage) {
  
