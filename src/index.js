@@ -1,3 +1,4 @@
+import './sass/index.scss';
 import Notiflix from 'notiflix';
 import debounce from 'lodash.debounce';
 import SimpleLightbox from 'simplelightbox';
