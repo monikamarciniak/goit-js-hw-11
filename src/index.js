@@ -8,14 +8,19 @@ const searchForm = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const loadMoreButton = document.querySelector('.load-more');
 
+//eventListeners
 
 searchForm.addEventListener('submit', searchImage);
 loadMoreButton.addEventListener('click', moreImages);
+
+// variables 
 
 let query = '';
 let page = 1;
 const perPage = 40;
 let lightbox = new SimpleLightbox('.gallery a');
+
+//functions
 
 function clearResults() {
   gallery.innerHTML = '';
@@ -71,6 +76,7 @@ getImages(query, page, perPage)
     .catch(error => console.log(error));
 }
 
+//rendering
 function renderGallery(data) {
   const markup = data
     .map(
@@ -103,6 +109,7 @@ function renderGallery(data) {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
+//On scroll to TOP
 let topBtn = document.querySelector(".top-btn");
 topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 window.onscroll = () => window.scrollY > 500 ? topBtn.style.opacity = 1 : topBtn.style.opacity = 0
